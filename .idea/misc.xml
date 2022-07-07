@@ -3,9 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/nameProfileLogo_background.xml" value="0.2105" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/nameProfileLogo_foreground.xml" value="0.197" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/nameUserNameLogo_foreground.xml" value="0.197" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/name_username_logo_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/nameuserprofile_background.xml" value="0.1" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/drawable/nameuserprofile_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/layout/activity_forgot_password.xml" value="0.17481884057971014" />
         <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/layout/activity_profile_view_user.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/layout/activity_profile_view_user.xml" value="0.2" />
         <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/layout/activity_register_user.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/aayus/AndroidStudioProjects/AuthApp/app/src/main/res/mipmap-anydpi-v26/nameProfileLogo.xml" value="0.1" />
       </map>
     </option>
   </component>

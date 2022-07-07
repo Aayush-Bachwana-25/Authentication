@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +23,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private EditText editTextName,editTextUsername,editTextEmail,editTextPassword,editTextAge;
     private Button buttonRegister,buttonReset;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editTextEmail=(EditText) findViewById(R.id.edit_text_email);
         editTextPassword=(EditText) findViewById(R.id.edit_text_password);
         editTextAge=(EditText) findViewById(R.id.edit_text_age);
+        progressBar=(ProgressBar) findViewById(R.id.registerUserIndeterminateProgressbar);
 
         buttonRegister.setOnClickListener(this);
         buttonReset.setOnClickListener(this);
@@ -57,7 +60,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                 case R.id.resetButton:
                     resetValues();
                     break;
-
             }
     }
 
@@ -118,6 +120,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                 return;
             }
 
+        progressBar.setVisibility(View.VISIBLE);
 
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -132,6 +135,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
+                                                progressBar.setVisibility(View.GONE);
+
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(RegisterUser.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
                                                 } else {
@@ -140,10 +145,14 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                             }
                                         });
                             } else {
+                                progressBar.setVisibility(View.GONE);
+
                                 Toast.makeText(RegisterUser.this, "User Registration failed! Try Again", Toast.LENGTH_LONG).show();
                             }
                         }
                     });
+
+
 
 
     }
